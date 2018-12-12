@@ -1,28 +1,18 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Repository from './components/repository'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+import './app.sass'
 
-export default App;
+const App = () => (
+	<div className="App Wrapper">
+		<h1>React.js</h1>
+		{/** Put repos componenets here */}
+		<Repository name="factoryhr/CustomUISwitch" />
+		<Repository name="factoryhr/laravel-attachments" />
+		<Repository name="factoryhr/Http2-Setup" />
+		<Repository name="factoryhr/blog-post-introduction-to-redux-for-web-application-development" />
+		<Repository name="factoryhr/js-workshop" />
+	</div>
+)
+
+export default App
